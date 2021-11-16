@@ -1,0 +1,32 @@
+let input  = [{
+    "memory_summary" : [{
+        "maximum_capacity" : [2048, "MBytes"],
+    "max_memory_module_size" : [4096, "MBytes"] ,
+    "mem_slots" : 4,
+    "error_corrrecton" : "none",
+    "DRAM_frequency" : [199.0, "MHz"],
+    "memory_timings" : [3,'-',3,'-',3,'-',8,"(CL-RCD-RP-RAS)"]
+    }]
+}, {
+    "device_locator" : [{
+        "manufacturer" : "hyundai electronics",
+        "part_number" : ["HYMD264","646D8J-D43"],
+        "serial_number" : "FFF7240",
+        "capacity" : [512,"MBytes"],
+        "memory_type" : ["DDR","(PC3200)"],
+        "speed" : [200,"MHz"],
+        "supported_frequencies" : [133," MHz",",",166," MHz",",",200," MHz"],
+        "memory_timings_1" : [2,'-',2,'-',2,'-',6,'-',0," at ",133," MHz"],
+        "memory_timings_2" : [2,'-',3,'-',3,'-',7,'-',0," at ",133," MHz"],
+        "memory_timings_3" : [3,'-',3,'-',3,'-',8,'-',0," at ",133,"MHz"],
+        "data_width" : [64,"bits"],
+        "manufacturing_date" : [2005,",","week",39],
+        "EPP_SPD_Support" : "No",
+        "XMP_SPD_Support" : "No"
+    }]
+
+}];
+console.log(input[0].memory_summary.join(" "));
+console.log(input[0].memory_summary[0].memory_timings.join(""));
+console.log(input[1].device_locator[0].supported_frequencies.join(""));
+console.log(input[1].device_locator[0].memory_timings_1.join(""));
